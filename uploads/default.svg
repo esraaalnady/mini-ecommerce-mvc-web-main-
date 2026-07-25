@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="460" viewBox="0 0 600 460" role="img" aria-label="No image">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbc2eb"/>
+      <stop offset="100%" stop-color="#a6c1ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bg)"/>
+  <circle cx="300" cy="190" r="70" fill="rgba(255,255,255,0.55)"/>
+  <path d="M250 210h100v12c0 28-22 50-50 50s-50-22-50-50v-12z" fill="rgba(255,255,255,0.7)"/>
+  <rect x="265" y="145" width="70" height="55" rx="12" fill="rgba(255,255,255,0.85)"/>
+  <circle cx="282" cy="165" r="6" fill="#ff7eb3"/>
+  <circle cx="300" cy="158" r="5" fill="#ff758c"/>
+  <circle cx="318" cy="168" r="6" fill="#ff9a9e"/>
+  <text x="300" y="310" text-anchor="middle" fill="#4a4a4a" font-family="Tahoma, Arial, sans-serif" font-size="28" font-weight="700">&#1604;&#1575; &#1578;&#1608;&#1580;&#1583; &#1589;&#1608;&#1585;&#1577;</text>
+  <text x="300" y="345" text-anchor="middle" fill="#6b6b6b" font-family="Tahoma, Arial, sans-serif" font-size="16">&#1587;&#1610;&#1578;&#1605; &#1573;&#1590;&#1575;&#1601;&#1577; &#1589;&#1608;&#1585;&#1577; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580; &#1602;&#1585;&#1610;&#1576;&#1575;&#1611;</text>
+</svg>
