@@ -1,0 +1,165 @@
+/* أنماط لوحة الإدارة المشتركة — قائمة جانبية مثبتة */
+body.admin-body {
+    margin: 0;
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* تخطيط الصفحة: قائمة ثابتة + محتوى متحرك */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* تثبيت القائمة الجانبية أثناء التمرير والتنقل */
+.admin-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #212529;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.admin-sidebar-inner {
+    padding: 20px 12px;
+}
+
+.admin-brand {
+    text-align: center;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #0dcaf0;
+    font-weight: 700;
+}
+
+.admin-nav a {
+    color: #dee2e6;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    transition: 0.2s ease;
+}
+
+.admin-nav a:hover {
+    background-color: #343a40;
+    color: #0dcaf0;
+}
+
+.admin-nav a.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.admin-nav a.admin-link-accent {
+    color: #0dcaf0;
+    font-weight: 700;
+}
+
+.admin-nav a.admin-link-danger {
+    color: #ff6b6b;
+}
+
+.admin-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 1rem 0;
+}
+
+/* منطقة المحتوى بجانب القائمة */
+.admin-content {
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem 2rem 2.5rem;
+}
+
+.admin-content .card,
+.admin-content .table-responsive {
+    background: #fff;
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+    }
+
+    .admin-content {
+        padding: 1rem;
+    }
+}
+
+/* جداول الإدارة القابلة للفرز والتصفية (بدون DataTables) */
+.admin-table-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.admin-table-toolbar label {
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.admin-table-toolbar input[type="search"] {
+    min-width: 220px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 0.45rem 0.75rem;
+}
+
+table.js-enhanced-table thead th.is-sortable {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+table.js-enhanced-table thead th.is-sortable:hover {
+    background-color: #e9ecef;
+    color: #0d6efd;
+}
+
+table.js-enhanced-table thead th.is-sortable::after {
+    content: '⇅';
+    position: absolute;
+    left: 0.35rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    opacity: 0.45;
+}
+
+table.js-enhanced-table thead th.is-sorted-asc::after {
+    content: '▲';
+    opacity: 1;
+    color: #0d6efd;
+}
+
+table.js-enhanced-table thead th.is-sorted-desc::after {
+    content: '▼';
+    opacity: 1;
+    color: #0d6efd;
+}
+
+table.js-enhanced-table thead th.no-sort {
+    cursor: default;
+}
